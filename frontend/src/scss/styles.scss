@@ -1,0 +1,19 @@
+// Normalize style ------- //
+@import "../../vendor/normalize-scss/sass/normalize";
+// Reset style ----------- //
+@import "../../vendor/reset-scss/_reset-src.scss";
+// Font awesome ---------- //
+@import "../../vendor/font-awesome/scss/font-awesome.scss";
+
+@import "compass/css3";
+@import "compass/typography/vertical_rhythm";
+
+@import "utilites/index";
+@import "layout/index";
+@import "base/index";
+@import "components/index";
+@import "modules/index";
+
+img {
+    max-width: 100%;
+}

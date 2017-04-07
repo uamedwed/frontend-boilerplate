@@ -1,0 +1,43 @@
+// ----------------------- //
+// Mixins ---------------- //
+// ----------------------- //
+
+/*
+    $screen_lg: 1400px;
+    $screen_lg_min: 1200px;
+    $screen_md_max: ($screen_lg_min - 1); 
+    $screen_md_min: 992px;
+    $screen_sm_max: ($screen_md_min - 1);
+    $screen_sm_min: 768px;
+    $screen_xs_max: ($screen_sm_min - 1);
+    $screen_xs_min: 480px;    
+    $screen_xs_small_max: ($screen_xs_min - 1); 
+    $screen_xs_small_min: 320px;  
+*/
+@mixin for-size($range) {   
+    @if $range == device-small {
+        @media (min-width: $screen_xs_small_min) and (max-width: $screen_xs_small_max) { @content; }
+    } @else if $range == device-small-max {
+        @media (max-width: $screen_xs_small_max) { @content; }        
+    } @else if $range == phone-only {
+        @media (min-width: $screen_xs_min) and (max-width: $screen_xs_max) { @content; }
+    } @else if $range == phone-up {
+        @media (min-width: $screen_xs_max) { @content; }
+    } @else if $range == phone-max {
+        @media only screen and (max-width: $screen_xs_max) { @content; }        
+    } @else if $range == tablet-only {
+        @media (min-width: $screen_sm_min) and (max-width: $screen_sm_max) { @content; }
+    } @else if $range == tablet-up {
+        @media (min-width: $screen_sm_max) { @content; }
+    } @else if $range == tablet-max {
+        @media only screen and (max-width: $screen_sm_max) { @content; }        
+    } @else if $range == desktop-only {
+        @media (min-width: $screen_md_min) and (max-width: $screen_md_max) { @content; }
+    } @else if $range == desktop-up {
+        @media (min-width: $screen_md_max) { @content; }
+    } @else if $range == desktop-max {
+        @media only screen and (max-width: $screen_md_max) { @content; }        
+    } @else if $range == desktop-lg-up {
+        @media (min-width: $screen_lg) { @content; }
+    }
+}

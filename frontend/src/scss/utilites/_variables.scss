@@ -1,0 +1,55 @@
+// ----------------------- //
+// Variables ------------- //
+// ----------------------- //
+
+/* Base -----------*/
+$url_images: "../img";
+$url_fonts: "../fonts";
+.is-hidden {
+    display: none !important;
+}
+/* Colors ---------*/
+$color_white: #ffffff;
+$color_black: #000000;
+
+/* Fonts ----------*/
+$font_family_base: Arial, Helvetica, sans-serif;
+/*font awesome settings*/
+$fa-font-path: "#{$url_fonts}";
+/* Indents --------*/
+$padding_base: 24px;
+/* Typography -----*/
+$font_size_base: 16px;
+$line_height_base: 24px;
+$font_size_h1: $font_size_base * 2.5; //40pt
+$line_height_h1: $line_height_base * 2; //48pt
+$font_size_h2: $font_size_base * 2.1875; //35pt
+$line_height_h2: $line_height_base * 1.75; //42pt
+$font_size_h3: $font_size_base * 1.875; //30pt
+$line_height_h3: $line_height_base * 1.5; //36pt
+$font_size_h4: $font_size_base * 1.375; //22pt
+$line_height_h4: $line_height_base * 1.25; //30pt
+/* Buttons --------*/
+$btn_height: 48px;
+$btn_border_radius: 24px;
+$btn_padding: 24px;
+$btn_font_size: 16px;
+$btn_height_small: 24px;
+$btn_border_radius_small: 12px;
+$btn_padding_small: 18px;
+$btn_font_size_small: 14px;
+/* Forms ----------*/
+/* Breadcrumbs ----*/
+/* Modals ---------*/
+/* Breakpoints ----*/
+$screen_lg: 1400px;
+$screen_lg_min: 1200px;
+$screen_md_max: ($screen_lg_min - 1); 
+$screen_md_min: 992px;
+$screen_sm_max: ($screen_md_min - 1);
+$screen_sm_min: 768px;
+$screen_xs_max: ($screen_sm_min - 1);
+$screen_xs_min: 480px;    
+$screen_xs_small_max: ($screen_xs_min - 1); 
+$screen_xs_small_min: 320px;  
+

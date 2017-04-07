@@ -1,0 +1,69 @@
+// ----------------------- //
+// Grids style ----------- //
+// ----------------------- //
+
+/* Susy Grids -----*/
+@import "../../vendor/susy/sass/susy";
+$susy: (
+  columns: 12, 
+  gutters: 30px/70px,
+  column-width: 70px,
+  gutter-position: inside-static,
+  global-box-sizing: border-box,
+  debug: (
+      //image: show,
+      image: hide,
+      color: rgba(#66f, .25),
+      output: background
+      
+  )
+);
+
+@include border-box-sizing;
+
+.container {
+    @include container;
+}
+
+.l-content__grid--four {
+    .l-content__col {
+        @include span(3);
+        @include for-size(device-small) {
+            @include span(12);      
+        }        
+        @include for-size(phone-only) {
+            @include span(12);      
+        }           
+        @include for-size(tablet-only) {
+            @include span(6);
+            &:nth-child(2n+1) {
+               clear: left; 
+            }
+        }   
+        @include for-size(desktop-only) {
+            @include span(3);        
+        }
+    }   
+}
+.l-content__grid--three {
+    .l-content__col {
+        @include span(12);
+        @include for-size(tablet-up) {
+            @include span(4);
+        }           
+    }    
+}
+.l-content__grid--two {
+    .l-content__col {
+        @include span(6);
+        @include for-size(device-small) {
+            @include span(12);      
+        }          
+        @include for-size(phone-only) {
+            @include span(12);
+        }  
+        @include for-size(tablet-only) {
+            @include span(6); 
+        }    
+    }
+}
