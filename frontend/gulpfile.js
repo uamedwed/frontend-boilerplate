@@ -12,6 +12,7 @@ var path = {
     build: {
         html: 'build/',
         js: 'build/assets/js/',
+        
         css: 'build/assets/css/',
         img: 'build/assets/img/',
         imgTemp: 'build/assets/content/img/',
@@ -19,6 +20,7 @@ var path = {
     },
     src: { 
         html: 'src/*.html', 
+        favicon: 'src/favicon.*',
         js: 'src/js/main.js',
         style: 'src/scss/styles.scss',
         styleDirectory: 'src/scss',
@@ -31,6 +33,7 @@ var path = {
     },
     watch: { 
         html: 'src/**/*.html',
+        favicon: 'src/favicon*', 
         js: 'src/js/**/*.js',
         style: 'src/**/*.scss',
         img: 'src/img/**/*.*',
@@ -44,6 +47,10 @@ gulp.task('html:build', function () {
     gulp.src(path.src.html)
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html)); 
+});
+gulp.task('favicon:build', function() {
+    gulp.src(path.src.favicon)
+        .pipe(gulp.dest(path.build.favicon)); 
 });
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
@@ -89,6 +96,7 @@ gulp.task('image:build', function () {
 });
 gulp.task('build', [
     'html:build',
+    'favicon:build',
     'fonts:build',    
     'style:build',    
     'js:build',
@@ -98,6 +106,9 @@ gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
+    watch([path.watch.favicon], function(event, cb) {
+        gulp.start('favicon:build');
+    });        
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
     });    
