@@ -12,7 +12,7 @@ var path = {
     build: {
         html: 'build/',
         js: 'build/assets/js/',
-        
+        favicon: 'build/',        
         css: 'build/assets/css/',
         img: 'build/assets/img/',
         imgTemp: 'build/assets/content/img/',
