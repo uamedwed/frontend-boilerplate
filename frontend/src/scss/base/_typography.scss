@@ -6,7 +6,7 @@
 body {
     font-size: $font_size_base;
     line-height: $line_height_base;
-    color: $color_black;
+    color: $color__black;
     font-family: $font_family_base;  
 }
 input, label, select, button, textarea {
@@ -14,7 +14,7 @@ input, label, select, button, textarea {
 }
 h1, h2, h3, h4 {
     font-family: $font_family_base;
-    color: $color_black;
+    color: $color__black;
 }
 h1 {
     font-size: $font_size_h1;
@@ -42,17 +42,17 @@ strong {
 a {
     text-decoration: none;
     border-bottom: 1px solid;
-    border-bottom-color: rgba($color_black, 0.5);  
+    border-bottom-color: rgba($color__black, 0.5);  
     &:hover {
-        border-bottom-color: rgba($color_black, 0.5);  
+        border-bottom-color: rgba($color__black, 0.5);  
     }
     &:active {
-        border-bottom-color: rgba($color_black, 0.5);  
+        border-bottom-color: rgba($color__black, 0.5);  
     }
     &:visited {
-        border-bottom-color: rgba($color_black, 0.5);  
+        border-bottom-color: rgba($color__black, 0.5);  
     }
     &:focus {
-        border-bottom-color: rgba($color_black, 0.5); 
+        border-bottom-color: rgba($color__black, 0.5); 
     }    
 }

@@ -13,13 +13,13 @@
   height: 40px;
   font-size: 20px;
   text-align: center;
-  background: $color_black;
+  background: $color__black;
   @include border-radius(50%, 50%);
   opacity: 1;
   z-index: 999;
   .fa {
     font-size: 35px;
     font-weight: 100;
-    color: $color_white;
+    color: $color__white;
   }
 }
