@@ -1,7 +1,6 @@
 /*
  * Third party
  */
-//= ../../vendor/jquery/dist/jquery.js
 
 /*
  * Custom

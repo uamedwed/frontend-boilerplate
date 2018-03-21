@@ -1,24 +1,31 @@
-// ----------------------- //
-// Variables ------------- //
-// ----------------------- //
+/****************************
+ Variables
+****************************/
 
-/* Base -----------*/
+/* Base ********************/
 $url_images: "../img";
 $url_fonts: "../fonts";
 .is-hidden {
     display: none !important;
 }
-/* Colors ---------*/
+$boder_radius_base: 3px;
+img {
+    max-width: 100%;
+}
+/* Colors ******************/
 $color__white: #ffffff;
+$color__white_dark: #f5f5f5;
 $color__black: #000000;
-
-/* Fonts ----------*/
-$font_family_base: Arial, Helvetica, sans-serif;
-/*font awesome settings*/
+$color__rusty_red: #ac2615;
+$color__warm_grey: #868686;
+$color__silver: #e0e1e2;
+/* Fonts *******************/
+$font_family_base: 'Open Sans', sans-serif;
+/* Font awesome settings ***/
 $fa-font-path: "#{$url_fonts}";
-/* Indents --------*/
+/* Indents *****************/
 $padding_base: 24px;
-/* Typography -----*/
+/* Typography **************/
 $font_size_base: 16px;
 $line_height_base: 24px;
 $font_size_h1: $font_size_base * 2.5; //40pt
@@ -29,7 +36,7 @@ $font_size_h3: $font_size_base * 1.875; //30pt
 $line_height_h3: $line_height_base * 1.5; //36pt
 $font_size_h4: $font_size_base * 1.375; //22pt
 $line_height_h4: $line_height_base * 1.25; //30pt
-/* Buttons --------*/
+/* Buttons *****************/
 $btn_height: 48px;
 $btn_border_radius: 24px;
 $btn_padding: 24px;
@@ -38,18 +45,19 @@ $btn_height_small: 24px;
 $btn_border_radius_small: 12px;
 $btn_padding_small: 18px;
 $btn_font_size_small: 14px;
-/* Forms ----------*/
-/* Breadcrumbs ----*/
-/* Modals ---------*/
-/* Breakpoints ----*/
+/* Forms *******************/
+/* Breadcrumbs *************/
+/* Modals ******************/
+/* Breakpoints *************/
 $screen_lg: 1400px;
 $screen_lg_min: 1200px;
-$screen_md_max: ($screen_lg_min - 1); 
+$screen_md_max: ($screen_lg_min - 1);
 $screen_md_min: 992px;
 $screen_sm_max: ($screen_md_min - 1);
 $screen_sm_min: 768px;
 $screen_xs_max: ($screen_sm_min - 1);
-$screen_xs_min: 480px;    
-$screen_xs_small_max: ($screen_xs_min - 1); 
-$screen_xs_small_min: 320px;  
+$screen_xs_min: 480px;
+$screen_xs_small_max: ($screen_xs_min - 1);
+$screen_xs_small_min: 320px;
 
+/* Themes ******************/
