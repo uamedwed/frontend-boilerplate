@@ -1,0 +1,23 @@
+const uri = 'mongodb://localhost/';
+const port = 3325;
+const apiKey = '';
+const baseAddress = '';
+
+
+const emailConfig = {
+    nodemailerAuthTransport: {
+        service: 'gmail',
+        auth: {
+            user: '<gmail_address>',
+            pass: '<gmail_password>'
+        }
+    },
+    senderAddress: '<gmail_address>', // same as emailConfig.nodemailerAuthTransport.auth.user
+    listOfReceivers: '<list_of_receivers>' // 'example@mail.ru, example1213@gmail.com'
+};
+
+module.exports.uri = uri;
+module.exports.port = port;
+module.exports.apiKey = apiKey;
+module.exports.baseAddress = baseAddress;
+module.exports.emailConfig = emailConfig;

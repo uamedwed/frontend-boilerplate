@@ -1,6 +1,0 @@
-vendor/
-node_modules/
-.sass-cache/
-/.idea
-build/
-package-lock.json
