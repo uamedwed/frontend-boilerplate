@@ -1,23 +1,22 @@
-const uri = 'mongodb://localhost/';
-const port = 3325;
-const apiKey = '';
-const baseAddress = '';
-
+const dbUri = process.env.DB_URI ? process.env.DB_URI : 'mongodb://localhost/';
+const serverPort = process.env.SERVER_PORT ? process.env.SERVER_PORT : 3325;
+const baseAddress = process.env.BASE_ADDRESS ? process.env.BASE_ADDRESS : '';
+const apiKey = process.env.API_KEY ? process.env.API_KEY : 'd3aWsd24TLfdsf81f23ds';
 
 const emailConfig = {
     nodemailerAuthTransport: {
         service: 'gmail',
         auth: {
-            user: '<gmail_address>',
-            pass: '<gmail_password>'
+            user: process.env.EMAIL_USER ? process.env.EMAIL_USER : '<gmail_address>',
+            pass: process.env.EMAIL_PASS ? process.env.EMAIL_PASS : '<gmail_password>'
         }
     },
-    senderAddress: '<gmail_address>', // same as emailConfig.nodemailerAuthTransport.auth.user
-    listOfReceivers: '<list_of_receivers>' // 'example@mail.ru, example1213@gmail.com'
+    senderAddress: process.env.SENDER_ADDRESS ? process.env.SENDER_ADDRESS : '<gmail_address>', // same as emailConfig.nodemailerAuthTransport.auth.user
+    listOfReceivers: process.env.LIST_OF_RECEIVERS ? process.env.LIST_OF_RECEIVERS : '<list_of_receivers>' // 'example@mail.ru, example1213@gmail.com'
 };
 
-module.exports.uri = uri;
-module.exports.port = port;
+module.exports.dbUri = dbUri;
+module.exports.serverPort = serverPort;
 module.exports.apiKey = apiKey;
 module.exports.baseAddress = baseAddress;
 module.exports.emailConfig = emailConfig;

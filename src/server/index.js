@@ -5,8 +5,8 @@ const sendEmail = require('./sendEmail.js').sendEmail;
 const router = express.Router();
 
 const app = express();
-const uri = config.uri;
-const port = config.port;
+const uri = config.dbUri;
+const port = config.serverPort;
 const baseAddress = config.baseAddress;
 
 // allow Cross-domain requests
